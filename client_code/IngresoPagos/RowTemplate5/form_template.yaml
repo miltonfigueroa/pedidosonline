@@ -1,0 +1,21 @@
+components:
+- event_bindings: {change: pago_selected}
+  layout_properties: {column: KCZDXH}
+  name: pagar
+  properties: {align: center, checked: false, role: null, spacing_above: none, spacing_below: none, text: ''}
+  type: CheckBox
+- data_bindings:
+  - {code: 'self.item[''saldo'']', property: text, writeback: false}
+  layout_properties: {column: RGJLDN}
+  name: label_1
+  properties: {align: right, role: null, spacing_above: small, spacing_below: none, text: 'self. Item[''saldo]'}
+  type: Label
+- layout_properties: {column: PXPIEI}
+  name: pago
+  properties: {role: null, spacing_above: none, spacing_below: none}
+  type: Label
+container:
+  event_bindings: {}
+  properties: {auto_display_data: true, border: 0.5px solid grey, font_size: 11, role: null}
+  type: DataRowPanel
+is_package: true

@@ -1,0 +1,104 @@
+components:
+- layout_properties: {grid_position: 'CCUTHC,DJCPQL'}
+  name: label_2
+  properties: {align: center, background: '', bold: true, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: DEMO, tooltip: '', underline: false, visible: true}
+  type: Label
+- event_bindings: {click: regresa_click}
+  layout_properties: {grid_position: 'CCUTHC,RNLITV'}
+  name: button_1
+  properties: {align: left, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: REGRESA, tooltip: '', underline: false, visible: true}
+  type: Button
+- layout_properties: {grid_position: 'WXBESA,WEUVMS'}
+  name: label_3
+  properties: {align: right, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: 'PEDIDO #:', tooltip: '', underline: false, visible: true}
+  type: Label
+- layout_properties: {grid_position: 'WXBESA,ZJFNXC'}
+  name: cve_doc
+  properties: {}
+  type: Label
+- layout_properties: {grid_position: 'WXBESA,PHJCGN'}
+  name: label_4
+  properties: {align: right, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: 'IMPORTE:', tooltip: '', underline: false, visible: true}
+  type: Label
+- layout_properties: {grid_position: 'WXBESA,RJZLYQ'}
+  name: importe
+  properties: {align: left, background: '', bold: true, border: 1px solid, font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, visible: true}
+  type: Label
+- layout_properties: {grid_position: 'GYPXEO,RDKEQX'}
+  name: label_1
+  properties: {align: right, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: 'FECHA:', tooltip: '', underline: false, visible: true}
+  type: Label
+- layout_properties: {grid_position: 'GYPXEO,FRSNXG'}
+  name: fecha
+  properties: {}
+  type: Label
+- layout_properties: {grid_position: 'GYPXEO,JBEUUG'}
+  name: dir_entrega
+  properties: {}
+  type: Label
+- layout_properties: {grid_position: 'VHOCLG,UUNJCH'}
+  name: label_5
+  properties:
+    align: left
+    background: ''
+    bold: true
+    border: ''
+    font: ''
+    font_size: 12
+    foreground: ''
+    icon: ''
+    icon_align: left
+    italic: false
+    role: null
+    spacing_above: small
+    spacing_below: small
+    text: |
+      CONTACTO:
+    tooltip: ''
+    underline: false
+    visible: true
+  type: Label
+- layout_properties: {grid_position: 'VHOCLG,QZXNHE'}
+  name: contacto
+  properties: {}
+  type: Label
+- layout_properties: {grid_position: 'JPCOGZ,WBNFRY'}
+  name: nombre_cliente
+  properties: {}
+  type: Label
+- data_bindings: []
+  layout_properties: {grid_position: 'XAUQPF,XKXBUF'}
+  name: direccion
+  properties: {}
+  type: Label
+- components:
+  - layout_properties: {pinned: true}
+    name: repeating_panel_part_rep
+    properties: {background: '', border: '', foreground: '', item_template: Reporte.RowTemplate3, items: null, role: null, spacing_above: none, spacing_below: none, tooltip: '', visible: true}
+    type: RepeatingPanel
+  layout_properties: {full_width_row: false, grid_position: 'QFEKZL,YOCEPL'}
+  name: data_grid_1
+  properties:
+    auto_header: true
+    background: ''
+    border: 1px solid
+    columns:
+    - {data_key: cve_art, id: GTSXNG, title: CODIGO, width: '80'}
+    - {data_key: '', id: KMDHUQ, title: DESCRIPCION, width: '440'}
+    - {data_key: cant, id: CIEOMY, title: CANT, width: '50'}
+    - {data_key: precio, id: DOINMO, title: PRECIO, width: '70'}
+    - {data_key: tot_partida, id: NXFKCS, title: IMPORTE, width: '100'}
+    foreground: ''
+    role: null
+    rows_per_page: 30
+    show_page_controls: false
+    spacing_above: none
+    spacing_below: none
+    tooltip: ''
+    visible: true
+    wrap_on: never
+  type: DataGrid
+container:
+  properties: {background: '', border: '', col_spacing: small, col_widths: '{"WEUVMS":15,"ZJFNXC":20,"RJZLYQ":25,"RDKEQX":12,"FRSNXG":16,"JBEUUG":32,"PHJCGN":15,"WBNFRY":50,"UUNJCH":15,"QZXNHE":45}', foreground: '', role: null, spacing_above: none, spacing_below: none, tooltip: '', visible: true, wrap_on: never}
+  type: ColumnPanel
+is_package: true

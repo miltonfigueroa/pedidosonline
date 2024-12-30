@@ -1,0 +1,133 @@
+components:
+- event_bindings: {change: cuenta_change}
+  layout_properties: {grid_position: 'BLUGWM,SWWYLU'}
+  name: cuentas_bancarias
+  properties: {}
+  type: DropDown
+- event_bindings: {change: concepto_change}
+  layout_properties: {grid_position: 'BLUGWM,OFMPXM'}
+  name: drop_tipo
+  properties:
+    items: []
+  type: DropDown
+- event_bindings: {click: pagos_realizados_click}
+  layout_properties: {grid_position: 'BLUGWM,KLUZMU'}
+  name: button_2
+  properties: {text: PAGOS REALIZADOS, visible: false}
+  type: Button
+- data_bindings:
+  - {code: '', property: border, writeback: false}
+  layout_properties: {grid_position: 'WZNDRL,PDVMRM'}
+  name: no_recibo
+  properties: {background: 'theme:Primary 500', bold: true, border: '', italic: true}
+  type: TextBox
+- layout_properties: {grid_position: 'WZNDRL,HNRJBW'}
+  name: lista_formas
+  properties: {}
+  type: DropDown
+- layout_properties: {grid_position: 'WZNDRL,PIGJFD'}
+  name: label_3
+  properties: {align: right, text: 'Doc. Referencia:'}
+  type: Label
+- event_bindings: {change: no_referencia_change}
+  layout_properties: {grid_position: 'WZNDRL,WZTQFD'}
+  name: no_referencia
+  properties: {text: ''}
+  type: TextBox
+- layout_properties: {grid_position: 'WZNDRL,TCIGHH'}
+  name: fecha_tran
+  properties: {format: '%d/%m/%Y'}
+  type: DatePicker
+- event_bindings: {pressed_enter: busca_nit}
+  layout_properties: {grid_position: 'GUVGFS,DBHHIZ'}
+  name: nit_consulta
+  properties: {}
+  type: TextBox
+- layout_properties: {grid_position: 'GUVGFS,XHIETB'}
+  name: label_2
+  properties: {icon_align: right, text: Cliente}
+  type: Label
+- event_bindings: {change: lista_clientes_change}
+  layout_properties: {grid_position: 'GUVGFS,UIMGNT'}
+  name: lista_clientes
+  properties: {}
+  type: DropDown
+- layout_properties: {grid_position: 'PATTLL,WBGQPC'}
+  name: label_1
+  properties:
+    spacing_above: none
+    spacing_below: none
+    text: |
+      Monto del Pago:
+  type: Label
+- event_bindings: {pressed_enter: total_pagar_pressed_enter}
+  layout_properties: {grid_position: 'PATTLL,ZNTUPT'}
+  name: total_pagar
+  properties: {spacing_above: none, spacing_below: none, type: number}
+  type: TextBox
+- layout_properties: {grid_position: 'PATTLL,CQQIRN'}
+  name: spacer_1
+  properties: {height: 32}
+  type: Spacer
+- layout_properties: {grid_position: 'PATTLL,YCMYHP'}
+  name: label_4
+  properties: {text: 'Anotaciones:'}
+  type: Label
+- event_bindings: {change: referencia2_change}
+  layout_properties: {grid_position: 'PATTLL,BIHPBT'}
+  name: referencia2
+  properties: {}
+  type: TextBox
+- components:
+  - layout_properties: {}
+    name: repeating_detalle_pagos
+    properties: {border: '', item_template: IngresoPagos.RowTemplate5, role: espaciado, spacing_above: none, spacing_below: none}
+    type: RepeatingPanel
+  - event_bindings: {click: llama_grabar_pago}
+    layout_properties: {slot: footer}
+    name: button_1
+    properties: {text: GRABAR}
+    type: Button
+  - event_bindings: {click: limpia_forma}
+    layout_properties: {slot: footer}
+    name: button_3
+    properties: {align: center, text: NUEVO RECIBO}
+    type: Button
+  layout_properties: {grid_position: 'LBVQPU,CYNDUX'}
+  name: data_grid_1
+  properties:
+    columns:
+    - {data_key: concepto, expand: false, id: YBVWZO, title: CONCEPTO, width: 135.33331298828125}
+    - {data_key: documento, expand: false, id: JKSDUP, title: DOCUMENTO, width: 104}
+    - {data_key: num_cargo, expand: false, id: ZZSQZJ, title: NUM. CARGO, width: 101.6666259765625}
+    - {data_key: fecha, expand: false, id: VJQQOR, title: FECHA APLICA, width: 125.4443359375}
+    - {data_key: fecha_vence, expand: false, id: OJLQEN, title: FECHA VENCE, width: 112.5555419921875}
+    - {data_key: monto, expand: false, id: WTLANK, title: MONTO, width: 91.7777099609375}
+    - {data_key: saldo, expand: false, id: RGJLDN, title: '    SALDO', width: 126.22216796875}
+    - {data_key: pagar, expand: false, id: KCZDXH, title: PAGAR, width: 64.111083984375}
+    - {data_key: pago, expand: false, id: PXPIEI, title: PAGO, width: 104.9998779296875}
+    role: null
+    rows_per_page: 500
+    show_page_controls: false
+    spacing_above: none
+    spacing_below: none
+  type: DataGrid
+- layout_properties: {grid_position: 'XLCUHR,GVMBHN'}
+  name: usuario_conectado
+  properties: {}
+  type: Label
+- layout_properties: {grid_position: 'XLCUHR,YAZMMP'}
+  name: spacer_2
+  properties: {height: 32}
+  type: Spacer
+- event_bindings: {click: salida_click}
+  layout_properties: {grid_position: 'XLCUHR,XXYZGP'}
+  name: salida
+  properties: {background: 'theme:Gray 600', text: SALIR DEL SISTEMA}
+  type: Button
+container:
+  event_bindings: {}
+  properties: {col_widths: '{"DBHHIZ":20,"XHIETB":5,"UIMGNT":35,"WBGQPC":15,"ZNTUPT":10,"HNRJBW":13,"TCIGHH":14,"PDVMRM":11,"PIGJFD":11,"WZTQFD":11,"YCMYHP":10,"BIHPBT":17,"CQQIRN":20}', spacing_above: none, spacing_below: none}
+  type: ColumnPanel
+custom_component: false
+is_package: true

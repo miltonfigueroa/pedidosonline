@@ -1,0 +1,17 @@
+components:
+- event_bindings: {click: delete_click}
+  layout_properties: {column: ANXGJM}
+  name: delete
+  properties: {align: center, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '', icon: 'fa:minus-circle', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, visible: true}
+  type: Button
+- data_bindings: []
+  event_bindings: {change: d_importe_change, show: link_1_show}
+  layout_properties: {column: AURZJB}
+  name: d_importe
+  properties: {align: right, auto_expand: false, background: '', bold: false, border: '', enabled: false, font: '', font_size: 10, foreground: '', height: 25, italic: false, placeholder: '', role: null, spacing_above: none, spacing_below: none, text: '', tooltip: '', underline: false, visible: true}
+  type: TextArea
+container:
+  properties: {align: right, auto_display_data: true, background: '', bold: false, border: '', font: '', font_size: 10, foreground: '', italic: false, role: null, spacing_above: none, spacing_below: none, tooltip: '', underline: false, visible: true}
+  type: DataRowPanel
+is_package: true
+item_type: {table_id: 61116}

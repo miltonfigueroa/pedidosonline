@@ -1,0 +1,7 @@
+components:
+- layout_properties: {grid_position: 'TIRFDX,YTTMQH'}
+  name: image
+  properties: {height: 498.2221984863281}
+  type: Image
+container: {type: ColumnPanel}
+is_package: true

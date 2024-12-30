@@ -1,0 +1,121 @@
+components:
+- components:
+  - layout_properties: {grid_position: 'PBUZYL,IAYLCX'}
+    name: label_1
+    properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: headline, spacing_above: small, spacing_below: small, text: PEDIDOS EN LINEA, tooltip: '', underline: false, visible: true}
+    type: Label
+  - event_bindings: {click: nuevo_pedido_click}
+    layout_properties: {grid_position: 'PBUZYL,SGUMQJ'}
+    name: nuevo_pedido
+    properties: {align: center, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: primary-color, spacing_above: small, spacing_below: small, text: NUEVO, tooltip: '', underline: false, visible: true}
+    type: Button
+  - event_bindings: {pressed_enter: clave_text_box_pressed_enter}
+    layout_properties: {grid_position: 'PBUZYL,YXRZXJ'}
+    name: clave_text_box
+    properties: {align: right, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '', hide_text: false, italic: false, placeholder: '', role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', type: text, underline: false, visible: true}
+    type: TextBox
+  - event_bindings: {click: lista_pedidos_click}
+    layout_properties: {grid_position: 'RVYYOU,UNRMZU WHUFZS,MTWAPS'}
+    name: lista_pedidos
+    properties: {align: center, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: primary-color, spacing_above: small, spacing_below: small, text: Pagos, tooltip: '', underline: false, visible: true}
+    type: Button
+  - data_bindings: []
+    event_bindings: {click: estado_click}
+    layout_properties: {grid_position: 'RVYYOU,UNRMZU WHUFZS,ZOPTTN'}
+    name: estado
+    properties:
+      background: ''
+      foreground: ''
+      role: primary-color
+      text: |-
+        ESTADO
+        CUENTA
+    type: Button
+  - layout_properties: {grid_position: 'RVYYOU,ZBRZMU'}
+    name: spacer_1
+    properties: {height: 32}
+    type: Spacer
+  - layout_properties: {grid_position: 'RVYYOU,HJVHPG'}
+    name: fecha_doc
+    properties: {align: right, background: '', bold: false, border: '', date: '', enabled: true, font: '', font_size: null, foreground: '', format: '%d/%m/%Y', italic: false, max_date: '', min_date: '', pick_time: false, placeholder: '', role: null, spacing_above: small, spacing_below: small, tooltip: '', underline: false, visible: true}
+    type: DatePicker
+  - layout_properties: {grid_position: 'RVYYOU,TFDZVJ WOOUMR,FQZCRI'}
+    name: impformat
+    properties: {align: right, auto_expand: false, background: '', bold: false, border: '', enabled: false, font: '', font_size: null, foreground: '', height: '35', italic: false, placeholder: '', role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, visible: true}
+    type: TextArea
+  - layout_properties: {grid_position: 'RVYYOU,TFDZVJ VLCPYB,OLZNHG'}
+    name: importe
+    properties: {align: right, auto_expand: false, background: '', bold: true, border: '', enabled: false, font: '', font_size: null, foreground: '', height: '30', italic: false, placeholder: '', role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, visible: false}
+    type: TextArea
+  - components:
+    - event_bindings: {pressed_enter: busca_nit}
+      layout_properties: {grid_position: 'YMLKUQ,ARNMOA'}
+      name: nit_consulta
+      properties: {align: left, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '', hide_text: false, italic: false, placeholder: '', role: null, spacing_above: none, spacing_below: none, text: '', tooltip: BUSQUEDA POR NIT, type: text, underline: false, visible: true}
+      type: TextBox
+    - layout_properties: {grid_position: 'YMLKUQ,RXHVLH'}
+      name: spacer_2
+      properties: {height: 28}
+      type: Spacer
+    - data_bindings: []
+      layout_properties: {grid_position: 'YMLKUQ,DMNDVW'}
+      name: label_2
+      properties: {align: left, background: '', bold: false, border: '', font: '', font_size: 12, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: none, spacing_below: none, text: NOMBRE CLIENTE, tooltip: '', underline: false, visible: true}
+      type: Label
+    - event_bindings: {change: lista_clientes_change}
+      layout_properties: {grid_position: 'YMLKUQ,QIAFSW'}
+      name: lista_clientes
+      properties: {spacing_above: none, spacing_below: none}
+      type: DropDown
+    - event_bindings: {}
+      layout_properties: {grid_position: 'CEZURC,RQBWFE'}
+      name: lista_formas
+      properties: {}
+      type: DropDown
+    - layout_properties: {grid_position: 'CEZURC,AFYYDY'}
+      name: label_3
+      properties: {text: FORMA DE PAGO}
+      type: Label
+    - layout_properties: {grid_position: 'CEZURC,GBJQOW'}
+      name: spacer_3
+      properties: {height: 32}
+      type: Spacer
+    layout_properties: {grid_position: 'JPPYPJ,BYETDJ'}
+    name: panel
+    properties: {col_widths: '{"ARNMOA":5,"QIAFSW":40,"RXHVLH":10,"DMNDVW":5}'}
+    type: ColumnPanel
+  layout_properties: {grid_position: 'DXCYJC,BMHFHW'}
+  name: card_1
+  properties: {col_widths: '{"TFDZVJ":17,"IAYLCX":50,"YXRZXJ":15,"HJVHPG":15,"ZBRZMU":35,"UNRMZU":20,"SGUMQJ":15}', role: card}
+  type: ColumnPanel
+- data_bindings:
+  - {code: 'self.item[''mostrar'']', property: text}
+  event_bindings: {click: click_users}
+  layout_properties: {grid_position: 'DQJULW,CERHYV'}
+  name: users
+  properties: {align: left, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '', icon: 'fa:user-secret', icon_align: left, italic: false, role: primary-color, spacing_above: small, spacing_below: small, text: SALIR, tooltip: '', underline: false, visible: true}
+  type: Button
+- event_bindings: {click: imprimirya}
+  layout_properties: {grid_position: 'DQJULW,KEUIYM'}
+  name: imprimir
+  properties: {align: center, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: primary-color, spacing_above: small, spacing_below: small, text: IMPRIMir, tooltip: '', underline: false, visible: true}
+  type: Button
+- event_bindings: {click: button_3_click}
+  layout_properties: {grid_position: 'DQJULW,FKAPSB'}
+  name: button_3
+  properties: {align: center, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: primary-color, spacing_above: small, spacing_below: small, text: LIMPIA, tooltip: '', underline: false, visible: false}
+  type: Button
+- event_bindings: {click: submit_button_click}
+  layout_properties: {grid_position: 'DQJULW,PWXCQL'}
+  name: submit_button
+  properties: {align: center, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: primary-color, spacing_above: small, spacing_below: small, text: GRABA PEDIDO, tooltip: '', underline: false, visible: true}
+  type: Button
+- layout_properties: {grid_position: 'DQJULW,HGPHYT'}
+  name: usuario_conectado
+  properties: {align: left, auto_expand: false, background: '', bold: false, border: '', enabled: false, font: '', font_size: 10, foreground: '', height: 27, italic: false, placeholder: '', role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, visible: true}
+  type: TextArea
+container:
+  event_bindings: {show: muestra}
+  properties: {background: '', border: '', col_spacing: medium, col_widths: '{"PWXCQL":19,"CERHYV":10,"HGPHYT":10,"KEUIYM":11,"FKAPSB":9}', foreground: '', role: null, spacing_above: small, spacing_below: small, tooltip: '', visible: true, wrap_on: never}
+  type: ColumnPanel
+is_package: true

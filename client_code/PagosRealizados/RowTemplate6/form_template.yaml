@@ -1,0 +1,18 @@
+components:
+- event_bindings: {change: sel_eliminado}
+  layout_properties: {column: JUOCFX}
+  name: check_elimina
+  properties: {align: center, spacing_above: none, spacing_below: none, text: ''}
+  type: CheckBox
+- data_bindings:
+  - {code: 'self.item[''numreg'']', property: text, writeback: false}
+  layout_properties: {column: JKSDUP}
+  name: l_numreg
+  properties: {spacing_above: none, spacing_below: none}
+  type: Label
+- layout_properties: {column: MGCGNK}
+  name: label_eliminado
+  properties: {spacing_above: none, spacing_below: none}
+  type: Label
+container: {type: DataRowPanel}
+is_package: true

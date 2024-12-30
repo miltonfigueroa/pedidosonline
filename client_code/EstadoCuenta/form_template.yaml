@@ -1,0 +1,35 @@
+components:
+- event_bindings: {click: regresa_click}
+  layout_properties: {grid_position: 'DSFXIO,NYAUHU'}
+  name: regresa
+  properties: {text: REGRESA}
+  type: Button
+- components:
+  - layout_properties: {grid_position: 'PVSMQJ,IAMJAH'}
+    name: nombre_cliente
+    properties: {bold: true, font_size: 14}
+    type: TextBox
+  layout_properties: {grid_position: 'LXONTP,JNNHPM'}
+  name: card_1
+  properties: {role: card}
+  type: ColumnPanel
+- components:
+  - data_bindings:
+    - {code: 'self.item['''']', property: items, writeback: false}
+    layout_properties: {}
+    name: repeating_estado_cuenta
+    properties: {item_template: EstadoCuenta.RowTemplate4, spacing_above: none, spacing_below: none}
+    type: RepeatingPanel
+  layout_properties: {grid_position: 'SJMQTX,XFDIDA'}
+  name: datos_estado_cuenta
+  properties:
+    columns:
+    - {data_key: concepto, id: JKSDUP, title: CONCEPTO}
+    - {data_key: documento, id: VJQQOR, title: DOCUMENTO}
+    - {data_key: fecha, id: OJLQEN, title: FECHA}
+    - {data_key: monto, id: TGPIDQ, title: MONTO}
+    spacing_above: none
+    spacing_below: none
+  type: DataGrid
+container: {type: ColumnPanel}
+is_package: true

@@ -1,0 +1,21 @@
+components:
+- layout_properties: {grid_position: 'TKMIKD,OUWCOT'}
+  name: spacer_1
+  properties: {height: 32}
+  type: Spacer
+- layout_properties: {grid_position: 'TKMIKD,MUEXME'}
+  name: fecha_recibo
+  properties: {}
+  type: Label
+- layout_properties: {grid_position: 'GPUJMY,HQHPIM'}
+  name: label_1
+  properties: {text: 'Recibí de:'}
+  type: Label
+- layout_properties: {grid_position: 'GPUJMY,XIMSIU'}
+  name: cliente
+  properties: {}
+  type: Label
+container:
+  properties: {col_widths: '{"HQHPIM":10,"XIMSIU":50,"OUWCOT":45,"MUEXME":15}'}
+  type: ColumnPanel
+is_package: true

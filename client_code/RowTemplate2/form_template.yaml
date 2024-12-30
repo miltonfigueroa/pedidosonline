@@ -1,0 +1,23 @@
+components:
+- event_bindings: {change: selecciona_pedido_change}
+  layout_properties: {column: EGCYOG}
+  name: check_selecciona
+  properties: {align: left, background: '', bold: false, border: '', checked: false, enabled: true, font: '', font_size: null, foreground: '', italic: false, role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, visible: true}
+  type: CheckBox
+- data_bindings:
+  - {code: 'self.item[''importe'']', property: text}
+  layout_properties: {column: KLREKB}
+  name: label_1
+  properties: {align: right, background: '', bold: false, border: '', font: '', font_size: 12, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, visible: true}
+  type: Label
+- data_bindings:
+  - {code: 'self.item[''entrega'']', property: date, writeback: true}
+  event_bindings: {change: modifica_fecha}
+  layout_properties: {column: RIKYWT}
+  name: date_entrega
+  properties: {align: left, background: '', bold: false, border: '', date: '', enabled: true, font: '', font_size: 10, foreground: '', format: '%d/%m/%Y', italic: false, max_date: '', min_date: '', pick_time: false, placeholder: '', role: null, spacing_above: small, spacing_below: small, tooltip: '', underline: false, visible: true}
+  type: DatePicker
+container:
+  properties: {align: left, auto_display_data: true, background: '', bold: false, border: '', font: '', font_size: 14, foreground: '', italic: false, role: espaciado, spacing_above: none, spacing_below: none, tooltip: '', underline: false, visible: true}
+  type: DataRowPanel
+is_package: true

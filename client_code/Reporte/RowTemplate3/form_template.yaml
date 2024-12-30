@@ -1,0 +1,15 @@
+components:
+- layout_properties: {column: KMDHUQ}
+  name: descr
+  properties: {}
+  type: Label
+- layout_properties: {column: DOINMO}
+  name: f_precio
+  properties: {align: right, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, visible: true}
+  type: Label
+- layout_properties: {column: NXFKCS}
+  name: f_total_partida
+  properties: {align: right, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, visible: true}
+  type: Label
+container: {type: DataRowPanel}
+is_package: true
