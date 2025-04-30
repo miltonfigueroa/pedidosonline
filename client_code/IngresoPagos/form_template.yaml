@@ -100,12 +100,13 @@ components:
     - {data_key: concepto, expand: false, id: YBVWZO, title: CONCEPTO, width: 135.33331298828125}
     - {data_key: documento, expand: false, id: JKSDUP, title: DOCUMENTO, width: 104}
     - {data_key: num_cargo, expand: false, id: ZZSQZJ, title: NUM. CARGO, width: 101.6666259765625}
-    - {data_key: fecha, expand: false, id: VJQQOR, title: FECHA APLICA, width: 125.4443359375}
-    - {data_key: fecha_vence, expand: false, id: OJLQEN, title: FECHA VENCE, width: 112.5555419921875}
+    - {data_key: fecha, expand: false, id: VJQQOR, title: FECHA APLICA, width: 114.5555419921875}
+    - {data_key: fecha_vence, expand: false, id: OJLQEN, title: FECHA VENCE, width: 104.333251953125}
     - {data_key: monto, expand: false, id: WTLANK, title: MONTO, width: 91.7777099609375}
-    - {data_key: saldo, expand: false, id: RGJLDN, title: '    SALDO', width: 126.22216796875}
+    - {data_key: saldo, expand: false, id: RGJLDN, title: '    SALDO', width: 117.8887939453125}
     - {data_key: pagar, expand: false, id: KCZDXH, title: PAGAR, width: 64.111083984375}
-    - {data_key: pago, expand: false, id: PXPIEI, title: PAGO, width: 104.9998779296875}
+    - {data_key: pago, expand: false, id: PXPIEI, title: PAGO, width: 74.9998779296875}
+    - {data_key: column_1, expand: false, id: TEOQOK, title: ''}
     role: null
     rows_per_page: 500
     show_page_controls: false
