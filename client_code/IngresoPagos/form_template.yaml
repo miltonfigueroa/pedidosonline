@@ -106,7 +106,7 @@ components:
     - {data_key: saldo, expand: false, id: RGJLDN, title: '    SALDO', width: 117.8887939453125}
     - {data_key: pagar, expand: false, id: KCZDXH, title: PAGAR, width: 64.111083984375}
     - {data_key: pago, expand: false, id: PXPIEI, title: PAGO, width: 74.9998779296875}
-    - {data_key: num_cpto, expand: false, id: TEOQOK, title: ''}
+    - {data_key: num_cpto, expand: false, id: TEOQOK, title: CP, width: 24}
     role: null
     rows_per_page: 500
     show_page_controls: false
