@@ -38,6 +38,9 @@ class IngresoPagos(IngresoPagosTemplate):
     
     self.usuario_conectado.text= anvil.users.get_user()['email']
     Globals.usuario=anvil.users.get_user()['iniciales']
+    column = [c for c in self.data_grid_1.columns if c['data_key'] == 'num_cpto'][0]
+    self.data_grid_1.columns.remove(column)
+    self.data_grid_1.columns = self.data_grid_1.columns
     return
     
   def llama_grabar_pago(self, **event_args):
@@ -82,17 +85,6 @@ class IngresoPagos(IngresoPagosTemplate):
  
     Globals.g_pagototal=self.total_pagar.text
     self.repeating_detalle_pagos.items = anvil.server.call('get_cuenta_cobrar' , Globals.cliente)
-    
-    column = [c for c in self.data_grid_1.columns if c['title'] == 'CP'][0]
-    print(column)
-# Remember the details of the hidden column
-    # self.hidden_columns.append(column)
-
-# Remove it from the Data Grid's column list
-    self.data_grid_1.columns.remove(column)
-
-# Make the change live
-    self.data_grid_1.columns = self.data_grid_1.columns
     self.repeating_detalle_pagos.raise_event_on_children("x-sel-pago")
 
     return
