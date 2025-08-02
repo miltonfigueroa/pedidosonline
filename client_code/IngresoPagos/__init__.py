@@ -53,8 +53,9 @@ class IngresoPagos(IngresoPagosTemplate):
       else:
         fpago=self.lista_formas.selected_value
         npago=int(fpago)-1
-        
+      ncuenta=Globals.cuenta  
       self.repeating_detalle_pagos.raise_event_on_children("x-regresa_pago")
+      #detalle=anvil.server.call('grabar_pago',self.fecha_tran.date, self.total_pagar.text, Globals.cliente, Globals.nombre_cliente ,Globals.nit, fpago, self.repeating_detalle_pagos.items,ncuenta,self.lista_formas.items[npago][0],Globals.usuario,self.drop_tipo.selected_value,self.no_referencia.text,self.no_recibo.text,Globals.dir_cliente,Globals.lote,Globals.oc,self.referencia2.text,Globals.concepto)
       detalle=anvil.server.call('grabar_pago',self.fecha_tran.date, self.total_pagar.text, Globals.cliente, Globals.nombre_cliente ,Globals.nit, fpago, self.repeating_detalle_pagos.items,ncuenta,self.lista_formas.items[npago][0],Globals.usuario,self.drop_tipo.selected_value,self.no_referencia.text,self.no_recibo.text,Globals.dir_cliente,Globals.lote,Globals.oc,self.referencia2.text,Globals.concepto)
       self.emite_recibo_click(detalle)
       alert("Pedido Grabado")
