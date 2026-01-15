@@ -5,6 +5,9 @@ import anvil.users
 #import anvil.tables as tables
 #import anvil.tables.query as q
 from anvil.tables import app_tables
+from anvil import tables
+_ = tables.app_tables.users.search()
+
 
 from datetime import date
 from .. import Globals
